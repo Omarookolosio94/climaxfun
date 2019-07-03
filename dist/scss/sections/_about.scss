@@ -1,0 +1,78 @@
+h4.m-headings{
+  position: relative;
+  text-align: center;
+  text-transform: uppercase;
+  color: $dark-yellow;
+  font-weight: 600;
+  font-size: .8rem;
+  width: 100%;
+
+}
+
+
+section#about-page{
+
+  .container{
+    width: 100%;
+  }
+
+  .about-content{
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+
+    p:first-child{
+      margin-bottom: .5rem;
+    }
+  }
+
+}
+
+
+section#about-page .service{
+  margin-top: .5rem;
+  padding: .5rem 0;
+
+  //style for each service items.
+  .service-item{
+    position: relative;
+    width: 90%;
+    margin: 2rem auto 2rem;
+    box-shadow: $card-shadow;
+
+    &:hover{
+      box-shadow: $card-hover-shadow;
+    }
+
+    //style for content details
+    .service-content{
+      background: $light-white;
+      outline: none;
+      text-align: center;
+      padding: 2rem 1rem;
+
+     h4{
+       text-transform: capitalize;
+     }
+
+     p{
+       font-size: .8rem;
+     }
+    }
+
+    //style for service icon
+    .service-icon{
+      position: absolute;
+      top: -1rem;
+      left: 45%;
+      background: $dark-yellow;
+      width: 2rem;
+      height: 2rem;
+      border-radius: 1rem;
+      margin: 0 auto;
+      border: 1px solid white;
+      outline: none;
+
+    }
+  }
+}

@@ -1,0 +1,132 @@
+/*Reset Document*/
+@include reset-default;
+
+body{
+  font-size: 16px;
+  line-height: 1.5rem;
+  background: $light-white;
+}
+
+/*Header Style*/
+header{
+  background: $dark-yellow;
+  width: 100%;
+  padding-top: 1rem;
+  overflow: hidden;
+  position: fixed;
+
+  .container{
+    position: relative;
+    width: 90%;
+    margin: 0 auto;
+  }
+}
+
+/*header button*/
+header .menu-btn{
+  position: absolute;
+  right: 0;
+  top: .7rem;
+  @include easeOut;
+
+  .btn-line{
+    margin: 0 0 5px 0;
+    width: 28px;
+    height: 3px;
+    background-color: $color-black;
+    @include easeOut;
+  }
+
+  &.close{
+    //close class to rotate btn to x position
+    transform: rotate(180deg);
+
+    .btn-line{
+
+      &:nth-child(1){
+        transform: rotate(45deg) translate(5px , 5px);   
+      }
+
+      &:nth-child(2){
+        opacity: 0;
+      }
+      
+      &:nth-child(3){
+        transform: rotate(-45deg) translate(7px , -6px);   
+      }
+    }
+  }
+}
+
+//make logo round shape
+header .logo{
+  overflow: hidden;
+
+  img{
+    width: 2rem;
+    height: 2rem;
+    border-radius: 1rem;
+  }
+}
+
+/*navigation style*/
+header nav.menu {
+  visibility: hidden;
+  position: fixed;//important in making nav overlie landing page
+  width: 100%;
+
+  &.show{
+    visibility: visible;
+  }
+  
+  //making nav slide from top
+  ul.menu-nav{
+    background: $dark-yellow;
+    height: auto;
+    list-style: none;
+    padding: 8rem 0 8rem 1rem;
+    transform: translate3d(0 , -100% , 0);
+    z-index: 2;
+    @include easeOut;
+
+    &.show{
+      transform: translate3d(0, 0, 0);
+      height: 100vh;
+      overflow: hidden;
+    }
+  }
+}
+
+header nav.menu{
+  //making li style from right
+  li.nav-item{
+    transform: translate3d(-600px , 0 , 0);
+    color: $color-black;
+    @include easeOut;
+
+    &.show{
+      transform: translate3d(0, 0, 0);
+    }
+
+    a{
+      color: $color-black;
+      text-transform: uppercase;
+      line-height: 2rem;
+      font-size: 14px;
+      font-weight: 400;
+
+      &:hover{
+        color: $light-white;
+      }
+    }
+  }
+
+  //adding delay to li displayed
+  @for $x from 1 through 5 {
+    li.nav-item:nth-child(#{$x}){
+      transition-delay: $x * 0.2s;
+    }
+  }
+}
+
+
