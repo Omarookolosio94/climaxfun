@@ -10,7 +10,9 @@ $light-yellow: rgba(lighten($color-yellow, 20), 0.9);
 $dark-yellow: rgba(darken($color-yellow, 5), 1);
 
 $dark-white: rgba(darken($color-white, 30), 0.9);
-$light-white: #e3e6e9;
+$light-white: rgba(227, 230, 233, 1);
+$transparent-white: rgba(227, 230, 233, 0.3);
+
 $dark-black: rgba(darken($color-black, 30), 0.9);
 $light-black: rgba(darken($color-black, 20), 0.8);
 

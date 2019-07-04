@@ -1,6 +1,9 @@
 @mixin easeOut{
    transition: all .5s ease-out;
 }
+@mixin easeIn{
+   transition: all .5s ease-in;
+}
 
 @mixin reset-default {
    *, html, body, div, dl, dt, dd, ul, ol, 

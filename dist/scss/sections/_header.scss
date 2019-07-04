@@ -14,6 +14,7 @@ header{
   padding-top: 1rem;
   overflow: hidden;
   position: fixed;
+  z-index: 4;
 
   .container{
     position: relative;
@@ -86,7 +87,6 @@ header nav.menu {
     list-style: none;
     padding: 8rem 0 8rem 1rem;
     transform: translate3d(0 , -100% , 0);
-    z-index: 2;
     @include easeOut;
 
     &.show{

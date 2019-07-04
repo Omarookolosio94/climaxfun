@@ -70,6 +70,7 @@ header {
   padding-top: 1rem;
   overflow: hidden;
   position: fixed;
+  z-index: 4;
 }
 
 header .container {
@@ -143,7 +144,6 @@ header nav.menu ul.menu-nav {
   padding: 8rem 0 8rem 1rem;
   -webkit-transform: translate3d(0, -100%, 0);
           transform: translate3d(0, -100%, 0);
-  z-index: 2;
   -webkit-transition: all .5s ease-out;
   transition: all .5s ease-out;
 }
@@ -239,6 +239,10 @@ h4.m-headings {
   width: 100%;
 }
 
+section#about-page {
+  padding-top: 1rem;
+}
+
 section#about-page .container {
   width: 100%;
 }
@@ -300,7 +304,7 @@ section#about-page .service .service-item .service-icon {
 }
 
 section#info-page {
-  border: 1px solid blue;
+  padding: 1rem 0;
   background: url("../img/vr.jpg") no-repeat;
   background-size: cover;
   background-position: center;
@@ -345,6 +349,7 @@ section#info-page .info-price h4 {
 }
 
 section#info-page .info-price ul.price-list {
+  border: 1px solid green;
   margin-bottom: 1rem;
 }
 
@@ -358,7 +363,7 @@ section#info-page .info-price ul.price-list .prices {
   font-weight: 600;
 }
 
-section#info-page .info-price ul.standard li.packages {
+section#info-page .info-price ul.standard li.packages, section#info-page .info-price ul.standard li.prices {
   background-color: #e3e6e9;
 }
 
@@ -366,7 +371,7 @@ section#info-page .info-price ul.standard li:hover {
   background-color: #e3e6e9;
 }
 
-section#info-page .info-price ul.premium li.packages {
+section#info-page .info-price ul.premium li.packages, section#info-page .info-price ul.premium li.prices {
   background-color: rgba(76, 73, 247, 0.9);
 }
 
@@ -374,11 +379,94 @@ section#info-page .info-price ul.premium li:hover {
   background-color: rgba(76, 73, 247, 0.9);
 }
 
-section#info-page .info-price ul.gold li.packages {
+section#info-page .info-price ul.gold li.packages, section#info-page .info-price ul.gold li.prices {
   background-color: rgba(238, 218, 128, 0.9);
 }
 
 section#info-page .info-price ul.gold li:hover {
   background-color: rgba(238, 218, 128, 0.9);
+}
+
+section#game-tech {
+  padding: 1rem 0;
+}
+
+section#game-tech .container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+/*stying the gallery for tech specs*/
+section#game-tech .tech-gallery {
+  margin: 1rem 0 0;
+}
+
+section#game-tech .tech-gallery .tech-list {
+  display: block;
+}
+
+section#game-tech .tech-gallery .tech-list .tech-box {
+  width: 100%;
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+section#game-tech .tech-gallery .tech-list .tech-box img {
+  width: 100%;
+  height: 20rem;
+}
+
+section#game-tech .tech-gallery .tech-list .tech-box .tech {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(227, 230, 233, 0.3);
+  opacity: 0;
+  -webkit-transition: all .1s ease-out;
+  transition: all .1s ease-out;
+}
+
+section#game-tech .tech-gallery .tech-list .tech-box .tech p {
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  top: 50%;
+}
+
+section#game-tech .tech-gallery .tech-list .tech-box:hover .tech {
+  opacity: 1;
+  -webkit-transition: all .5s ease-in;
+  transition: all .5s ease-in;
+}
+
+section#game-tech .game-list {
+  border: 1px solid green;
+}
+
+section#game-tech .game-list h4 {
+  font-size: .8rem;
+  text-align: center;
+  color: #d2b11c;
+}
+
+section#game-tech .game-list p {
+  border: 1px solid red;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+section#game-tech .game-list p.note {
+  font-size: .8rem;
+}
+
+section#game-tech .game-list ul.games {
+  display: block;
+  text-align: center;
+  font-size: .8rem;
+}
+
+section#game-tech .game-list ul.games li.free {
+  color: #d2b11c;
 }
 /*# sourceMappingURL=main.css.map */
