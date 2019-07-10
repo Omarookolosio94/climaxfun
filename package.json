@@ -1,0 +1,15 @@
+{
+  "name": "climaxfun",
+  "version": "1.0.0",
+  "description": "first website",
+  "main": "index.js",
+  "homepage": "https://Omarookolosio94.github.io/climaxfun",
+  "scripts": {
+    "deploy": "gh -pages-d dist"
+  },
+  "author": "okolosio oghenemaro",
+  "license": "ISC",
+  "dependencies": {
+    "gh-pages": "^2.0.1"
+  }
+}
